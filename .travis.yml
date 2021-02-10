@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # Print the version for logging
-  - docker build -t simple-node .
+  - docker build -t simple-node ./nd9990-c3-microservices-exercises/lesson-2-containers/exercises/simple-node
   - docker tag simple-node kungfulucky7/simple-node:latest
 
 # Tasks to perform after the process is successful.
