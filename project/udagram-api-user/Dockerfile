@@ -18,4 +18,4 @@ COPY . /app
 EXPOSE 8081
 
 # Define the Docker image's behavior at runtime
-CMD ["node", "server.js"]
+CMD ["npm", "run", "production"]
