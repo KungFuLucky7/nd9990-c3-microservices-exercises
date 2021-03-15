@@ -17,6 +17,12 @@ script:
   - docker --version # Print the version for logging
   - docker build -t simple-node ./lesson-2-containers/exercises/simple-node/
   - docker tag simple-node $DOCKER_HUB/simple-node:latest
+  - docker build -t udagram-api-feed ./project/udagram-api-feed/
+  - docker tag udagram-api-feed $DOCKER_HUB/udagram-api-feed:latest
+  - docker build -t udagram-api-user ./project/udagram-api-user/
+  - docker tag udagram-api-user $DOCKER_HUB/udagram-api-user:latest
+  - docker build -t udagram-frontend ./project/udagram-frontend/
+  - docker tag udagram-frontend $DOCKER_HUB/udagram-frontend:latest
 
 # Tasks to perform after the process is successful.
 # Formatting the Docker username and password as below enables you
