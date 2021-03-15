@@ -15,6 +15,8 @@ before_script:
 
 script:
   - docker --version # Print the version for logging
+  - docker build -t reverse-proxy ./project/nginx/
+  - docker tag reverse-proxy "$DOCKER_HUB"/reverse-proxy:latest
   - docker build -t udagram-api-feed ./project/udagram-api-feed/
   - docker tag udagram-api-feed "$DOCKER_HUB"/udagram-api-feed:latest
   - docker build -t udagram-api-user ./project/udagram-api-user/
@@ -27,6 +29,7 @@ script:
 # to programmatically log in without having the password exposed in logs.
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push "$DOCKER_HUB"/reverse-proxy"
   - docker push "$DOCKER_HUB"/udagram-api-feed"
   - docker push "$DOCKER_HUB"/udagram-api-user
   - docker push "$DOCKER_HUB"/udagram-frontend
