@@ -10,6 +10,8 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN apt-get update && apt-get install -qq -y python3-pip
+RUN pip3 install psycopg2
 
 # Copy app source
 COPY . /app
