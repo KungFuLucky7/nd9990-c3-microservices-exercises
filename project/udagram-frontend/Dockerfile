@@ -10,13 +10,14 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-RUN ionic build
 
 # Copy app source
 COPY . /app
+
+RUN ionic build
 
 # Bind the port that the image will run on
 EXPOSE 8100
 
 # Define the Docker image's behavior at runtime
-CMD ["ionic", "serve"]
+CMD ["ionic", "serve", "--external"]
