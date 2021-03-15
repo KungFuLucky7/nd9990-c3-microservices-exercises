@@ -2,7 +2,7 @@
 FROM beevelop/ionic AS ionic
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -17,4 +17,4 @@ RUN ionic build
 ## Run
 FROM nginx:alpine
 
-COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
+COPY --from=ionic /app/www /usr/share/nginx/html
