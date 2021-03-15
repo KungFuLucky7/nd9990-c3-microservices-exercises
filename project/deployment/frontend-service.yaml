@@ -9,6 +9,10 @@ spec:
   - name: "8100"
     port: 8100
     targetPort: 80
+    protocol: TCP
   selector:
     service: frontend
-#  type: LoadBalancer    
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
