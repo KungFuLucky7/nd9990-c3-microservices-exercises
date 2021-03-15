@@ -15,7 +15,7 @@ spec:
         service: reverse-proxy
     spec:
       containers:
-      - image: kungfulucky7/reverse-proxy
+      - image: kungfulucky7/reverse-proxy:latest
         name: reverse-proxy
         imagePullPolicy: Always          
         resources:

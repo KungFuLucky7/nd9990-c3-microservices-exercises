@@ -16,7 +16,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: kungfulucky7/udacity-frontend:local
+      - image: kungfulucky7/udagram-frontend:latest
         name: frontend
         imagePullPolicy: Always          
         ports:

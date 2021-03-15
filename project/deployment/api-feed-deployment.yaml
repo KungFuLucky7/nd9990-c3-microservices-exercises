@@ -15,7 +15,7 @@ spec:
         service: api-feed
     spec:
       containers:
-      - image: kungfulucky7/udacity-restapi-feed
+      - image: kungfulucky7/udagram-api-feed:latest
         name: api-feed
         imagePullPolicy: Always  
         resources:
