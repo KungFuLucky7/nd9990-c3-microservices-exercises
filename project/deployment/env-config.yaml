@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: QVdTX0JVQ0tFVAo=
-  AWS_PROFILE: QVdTX1BST0ZJTEUK
-  AWS_REGION: QVdTX1JFR0lPTgo=
-  JWT_SECRET: SldUX1NFQ1JFVAo=
-  POSTGRESS_DB: UE9TVEdSRVNTX0RCCg==
-  POSTGRESS_HOST: UE9TVEdSRVNTX0hPU1QK
+  AWS_BUCKET: terrywon-s3-test
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: helloworld
+  POSTGRESS_DB: postgres
+  POSTGRESS_HOST: terrywondb.ca89p0ph6mum.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100  
 metadata:
   name: env-config
